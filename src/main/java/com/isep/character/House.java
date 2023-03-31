@@ -13,11 +13,12 @@ public class House {
         int b = 0;
         int c = 0;
         int d = 0;
-        System.out.println("Quelle est votre qualité la plus importante ?\n" +
-                "a) La loyauté\n" +
-                "b) L'ambition\n" +
-                "c) L'intelligence\n" +
-                "d) Le courage");
+        System.out.println("What is your most important quality?\n" +
+                "a) Loyalty\n" +
+                "b) Ambition\n" +
+                "c) Intelligence\n" +
+                "d) Courage\n" +
+                "\n");
         reponse = scan.nextLine().toLowerCase();
         switch (reponse) {
             case "a" -> a += 1;
@@ -26,11 +27,11 @@ public class House {
             case "d" -> d += 1;
             default -> throw new IllegalArgumentException("invalid response");
         }
-        System.out.println("Quel est votre plus grand défaut ?\n" +
-                "a) La rancune\n" +
-                "b) La jalousie\n" +
-                "c) La vanité\n" +
-                "d) La témérité");
+        System.out.println("What is your biggest flaw?\n" +
+                "a) Grudge-holding\n" +
+                "b) Jealousy\n" +
+                "c) Vanity\n" +
+                "d) Recklessness");
         reponse = scan.nextLine().toLowerCase();
         switch (reponse) {
             case "a" -> a += 1;
@@ -39,11 +40,11 @@ public class House {
             case "d" -> d += 1;
             default -> throw new IllegalArgumentException("invalid response");
         }
-        System.out.println("Vous êtes face à un choix difficile, quel critère est le plus important pour vous ?\n" +
-                "a) La justice\n" +
-                "b) Le pouvoir\n" +
-                "c) La connaissance\n" +
-                "d) Le bien-être des autres");
+        System.out.println("You are faced with a difficult choice, what is the most important factor to you?\n" +
+                "a) Justice\n" +
+                "b) Power\n" +
+                "c) Knowledge\n" +
+                "d) The well-being of others");
         reponse = scan.nextLine().toLowerCase();
         switch (reponse) {
             case "a" -> a += 1;
@@ -52,11 +53,11 @@ public class House {
             case "d" -> d += 1;
             default -> throw new IllegalArgumentException("invalid response");
         }
-        System.out.println("Quel est votre élément préféré ?\n" +
-                "a) La terre\n" +
-                "b) L'eau\n" +
-                "c) L'air\n" +
-                "d) Le feu");
+        System.out.println("What is your favorite element?\n" +
+                "a) Earth\n" +
+                "b) Water\n" +
+                "c) Air\n" +
+                "d) Fire");
         reponse = scan.nextLine().toLowerCase();
         switch (reponse) {
             case "a" -> a += 1;
@@ -65,11 +66,11 @@ public class House {
             case "d" -> d += 1;
             default -> throw new IllegalArgumentException("invalid response");
         }
-        System.out.println("Vous êtes confronté(e) à une situation inconnue, comment réagissez-vous ?\n" +
-                "a) J'observe et j'analyse avant d'agir\n" +
-                "b) Je fonce tête baissée sans réfléchir\n" +
-                "c) Je demande conseil à mes proches\n" +
-                "d) Je suis prêt(e) à prendre des risques pour atteindre mon objectif");
+        System.out.println("You are faced with an unknown situation, how do you react?\n" +
+                "a) I observe and analyze before taking action\n" +
+                "b) I charge headfirst without thinking\n" +
+                "c) I seek advice from those close to me\n" +
+                "d) I am willing to take risks to achieve my goal");
         reponse = scan.nextLine().toLowerCase();
         switch (reponse) {
             case "a" -> a += 1;
@@ -90,6 +91,6 @@ public class House {
         else{
             maison.setHouse("Hufflepuff");
         }
-        System.out.println("Mmmmmmmmh intéressant... Mmmmmmmmh très intéressant... " + maison.getHouse() + " !");
+        System.out.println("Mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmh interesting... interesting... I see... " + maison.getHouse() + " !");
     }
 }
