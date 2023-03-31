@@ -6,7 +6,7 @@ import java.util.*;
 
 public class House {
     public static void house() {
-        SortingHat maison = new SortingHat();
+        SortingHat house = new SortingHat();
         Scanner scan = new Scanner(System.in);
         String reponse = new String();
         int a = 0;
@@ -80,17 +80,19 @@ public class House {
             default -> throw new IllegalArgumentException("invalid response");
         }
         if(a > b && a > c && a > d){
-            maison.setHouse("Gryffindor");
+            house.setHouse("Gryffindor");
         }
         else if(b > a && b > c && b >d){
-            maison.setHouse("Slytherin");
+            house.setHouse("Slytherin");
         }
         else if(c > a && c > b && c >d){
-            maison.setHouse("Ravenclaw");
+
+
+            house.setHouse("Ravenclaw");
         }
         else{
-            maison.setHouse("Hufflepuff");
+            house.setHouse("Hufflepuff");
         }
-        System.out.println("Mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmh interesting... interesting... I see... " + maison.getHouse() + " !");
+        System.out.println("Mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmh interesting... interesting... I see... " + house.getHouse() + " !");
     }
 }
