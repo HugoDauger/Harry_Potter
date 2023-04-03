@@ -1,12 +1,15 @@
 package com.isep.character;
 import java.util.*;
+import lombok.Data;
+
+@Data
 
 public class Wand {
     public static void wand(){
-        float weight;
+        int size;
         Random rand = new Random();
-        weight = rand.nextFloat(18,38);
-        System.out.println(weight);
+        size = rand.nextInt(15,33);
+        System.out.println(size);
         Core CoreChoice = Core.selectRandomCore();
         System.out.println(CoreChoice);
     }
