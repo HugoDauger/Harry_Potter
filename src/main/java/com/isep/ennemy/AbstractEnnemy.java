@@ -10,10 +10,6 @@ public abstract class AbstractEnnemy extends Character{
     protected int hitPower;
     protected AbstractSpell weakness;
     protected SpecialItem weakness2;
-
-    public AbstractEnnemy(double hp, double damage, double potionEfficiency, double dexterity) {
-        super(hp, damage, potionEfficiency, dexterity);
     }
-}
 
 
