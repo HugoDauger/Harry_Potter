@@ -17,6 +17,9 @@ public abstract class Character {
         this.dexterity = dexterity;
     }
 
+    protected Character() {
+    }
+
     public void attack(Character character) {
         System.out.println("I'm attacking ");
     }

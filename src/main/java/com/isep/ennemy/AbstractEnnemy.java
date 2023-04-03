@@ -13,6 +13,9 @@ public abstract class AbstractEnnemy extends Character{
     public AbstractEnnemy(double hp, double damage, double potionEfficiency, double dexterity) {
         super(hp, damage, potionEfficiency, dexterity);
     }
+
+    protected AbstractEnnemy() {
+    }
 }
 
 
