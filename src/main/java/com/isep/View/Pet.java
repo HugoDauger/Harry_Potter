@@ -1,4 +1,4 @@
-package com.isep;
+package com.isep.View;
 
 import java.util.Random;
 

@@ -41,5 +41,7 @@ public abstract class Character {
             return false;
         }
     }
+
+    public abstract boolean isCharacterAlive(Character character);
 }
 

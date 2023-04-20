@@ -1,6 +1,6 @@
 package com.isep.character;
 
-import com.isep.SortingHat;
+import com.isep.View.SortingHat;
 
 import java.util.*;
 
