@@ -34,7 +34,7 @@ public class Game {
 
         Potion coca = new Potion("Coca",50);
         Spell accio = new Spell("Accio",60);
-        Weapon sword = new Weapon("Gryffindor Sword",100);
+        SpecialItem sword = new SpecialItem("Gryffindor Sword",100);
         if (wizard.getHouse().getName()=="Gryffindor") {
             wizard.getNewWeapon(sword);
         }
@@ -71,11 +71,11 @@ public class Game {
         System.out.println("Congratulations, you have successfully validated your schooling at Poudlard!");
     }
 
-    public static Wizard initWizard() throws InterruptedException {
+    public static wizard initWizard() throws InterruptedException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Hi young wizard! To start the game, please enter your name :");
         String wizardName = scanner.nextLine();
-        Wizard wizard = new Wizard(wizardName);
+        wizardName wizard = new wizard(wizardName);
         System.out.println("Nice to meet you "+wizard.getName()+"!");
 
         Thread.sleep(Main.timer);
@@ -159,7 +159,7 @@ public class Game {
         System.out.println("Oh, you are facing Dolores Ombrage in the Exams room! Let's fight her!");
         int spellChoice = choiceInList(wizard,"Spells");
         wizard.attackWithSpell(wizard.knownSpells.get(spellChoice),enemy);
-        Weapon fireworks = new Weapon("Fireworks",100);
+        SpecialItem fireworks = new SpecialItem("Fireworks",100);
         wizard.getNewWeapon(fireworks);
         System.out.println("I think you should use those fireworks to win the fight");
         enemy.setWeakness2(fireworks);
@@ -197,7 +197,7 @@ public class Game {
         System.out.println("Congratulations! The evil has been defeated and the good has prevailed! You are the winner of the game!");
     }
 
-    public static void fightWithWeapon(Wizard wizard, AbstractEnemy enemy) throws InterruptedException {
+    public static void fightWithWeapon(wizard wizard, AbstractEnemy enemy) throws InterruptedException {
         while (enemy.isCharacterAliveWithoutPrint(enemy)){
             wizard.defend(wizard,enemy);
             int weaponChoice = choiceInList(wizard,"Weapons");
@@ -210,7 +210,7 @@ public class Game {
         }
     }
 
-    public static void fightWithSpell(Wizard wizard, AbstractEnemy enemy) throws InterruptedException {
+    public static void fightWithSpell(wizard wizard, AbstractEnemy enemy) throws InterruptedException {
         while (enemy.isCharacterAliveWithoutPrint(enemy)){
             wizard.defend(wizard,enemy);
             int spellChoice = choiceInList(wizard,"Spells");
@@ -261,7 +261,7 @@ public class Game {
         return answer;
     }
 
-    public static int choiceInList(Wizard wizard,String type){
+    public static int choiceInList(com.isep.character.wizard wizard, String type){
         Scanner scanner = new Scanner(System.in);
         switch (type){
             case ("Spells"):
