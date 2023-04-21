@@ -6,4 +6,7 @@ import lombok.Data;
 public class Potion {
     public String name;
     public int heal;
+
+    public Potion(String water, int i) {
+    }
 }

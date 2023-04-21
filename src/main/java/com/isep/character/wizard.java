@@ -100,12 +100,12 @@ public class wizard extends Character {
                     System.out.println("You are lucky, you dodged the attack!");
                 } else {
                     System.out.println("Dodge failed, you are taking the full hit!");
-                    wizard.setHealPoints(wizard.getHealPoints() - (enemy.getHitPower() / stats.get("Shield")));
+                    wizard.setHp(wizard.getHp() - (enemy.getDamage() / stats.get("Shield")));
                 }
             }
             case "take" -> {
                 System.out.println("You are taking the hit!");
-                wizard.setHealPoints(wizard.getHealPoints() - ((enemy.getHitPower() / 2) / stats.get("Shield")));
+                wizard.setHp(wizard.getHp() - ((enemy.getDamage() / 2) / stats.get("Shield")));
             }
         }
         isCharacterAlive(wizard);
@@ -114,9 +114,9 @@ public class wizard extends Character {
     public void drinkPotion(Potion potion, wizard wizard) throws InterruptedException {
         System.out.println("Drinking " + potion.getName() + "...");
         Thread.sleep(wizTimer);
-        wizard.setHealPoints(potion.getHeal() * stats.get("Potions Efficiency") + wizard.getHealPoints());
+        wizard.setHp(potion.getHeal() * stats.get("Potions Efficiency") + wizard.getHp());
         potions.remove(potion);
-        System.out.println("You have now " + wizard.getHealPoints() + "HP!");
+        System.out.println("You have now " + wizard.getHp() + "HP!");
     }
 
     public void attackWithSpell(AbstractSpell spell, AbstractEnemy enemy) throws InterruptedException {
@@ -129,7 +129,7 @@ public class wizard extends Character {
                 System.out.println("Attack failed, you lacked precision!");
             } else {
                 System.out.println("Nice hit!");
-                enemy.setHealPoints(enemy.getHealPoints() - spell.getDamage() * stats.get("Spells Damages"));
+                enemy.setHp(enemy.getHp() - spell.getDamage() * stats.get("Spells Damages"));
                 enemy.isCharacterAlive(enemy);
             }
         } else {
@@ -148,7 +148,7 @@ public class wizard extends Character {
                 System.out.println("Attack failed, you lacked precision!");
             } else {
                 System.out.println("Nice hit!");
-                enemy.setHealPoints(enemy.getHealPoints() - weapon.getDamage() * stats.get("Spells Damages"));
+                enemy.setHp(enemy.getHp() - weapon.getDamage() * stats.get("Spells Damages"));
                 enemy.isCharacterAlive(enemy);
             }
         } else {
@@ -165,8 +165,8 @@ public class wizard extends Character {
 
     @Override
     public boolean isCharacterAlive(Character character) {
-        if (character.getHealPoints() >= 0) {
-            System.out.println("You are still alive with " + character.getHealPoints() + " HP!");
+        if (character.getHp() >= 0) {
+            System.out.println("You are still alive with " + character.getHp() + " HP!");
             return true;
         } else {
             System.out.println("You are dead!");
