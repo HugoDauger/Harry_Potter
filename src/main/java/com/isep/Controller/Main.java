@@ -1,4 +1,6 @@
-package org.example;
+package com.isep.Controller;
+
+import com.isep.Controller.Game;
 
 public class Main {
 

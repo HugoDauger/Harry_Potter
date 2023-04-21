@@ -1,4 +1,4 @@
-package org.example;
+package com.isep.Controller;
 
 import com.isep.enemy.AbstractEnemy;
 import com.isep.enemy.Boss;

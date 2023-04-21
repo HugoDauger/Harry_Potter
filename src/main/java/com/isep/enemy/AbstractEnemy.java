@@ -7,6 +7,7 @@ public abstract class AbstractEnemy extends Character {
     protected int hitPower;
     protected AbstractSpell weakness;
     protected SpecialItem specialitem1;
+    private SpecialItem weakness2;
 
     public void setWeakness(AbstractSpell weakness) {
         this.weakness = weakness;
@@ -23,7 +24,7 @@ public abstract class AbstractEnemy extends Character {
         return weakness;
     }
 
-    public Weapon getWeakness2() {
+    public SpecialItem getWeakness2() {
         return weakness2;
     }
 
